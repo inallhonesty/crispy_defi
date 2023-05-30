@@ -1,0 +1,26 @@
+dependencies:
+    - smartcontractkit/chainlink@2.1.0
+    - openzeppelin/openzeppelin-contracts@4.8.3
+
+compiler:
+    solc:
+        remappings:
+            - "@chainlink=smartcontractkit/chainlink@2.1.0"
+            - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.3"
+networks:
+    development:
+        verify: False
+    ganache:
+        verify: False
+    sepolia:
+        verify: False
+        weth_token: "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14"
+        fau_token: "****"
+        dai_usd_price_feed: "0x14866185B1962B63C3Ea9E03Bc1da838bab34C19"
+        eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+
+wallets:
+    from_key: ${PRIVATE_KEY}
+    from_key2: ${PRIVATE_KEY2}
+
+dotenv: .env
